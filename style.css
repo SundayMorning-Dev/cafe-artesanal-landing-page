@@ -47,6 +47,15 @@ body {
   color: #351D14;
   text-decoration: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo-img{
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .navbar-container .navbar-menu {
@@ -70,7 +79,7 @@ body {
 
 .navbar-container .navbar-menu li a:hover {
   color: rgb(24, 23, 23);
-  background: rgba(188, 212, 229, 0.8);
+  background: #c58b6ac7;
   border: 2px solid #fff;
 }
 .navbar-container .navbar-menu.active {
@@ -149,28 +158,77 @@ body {
 }
 
 /*estilo padrão para as seções!=======*/
+
+/* CONTAINER GERAL DO SITE, Coloque esta classe em todas as seções para alinhar o conteúdo */
+.container-secao{
+    width: 100%; 
+    max-width: 1600px;/* Alinhado perfeitamente com sua navbar */
+    padding: 0 2rem;/* Espaçamento de segurança nas bordas esquerda/direita */
+
+}
+
 .secao {
   min-height: 100vh; /*isso faz a seção fica do tamanho da tela*/
-  padding: 100px 20px 20px 20px; /* Espaço para o menu não cobrir o texto eu acho*/
+  padding: 100px 0 20px 0; /* Espaço para o menu não cobrir o texto eu acho*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /*isso faz o texto ficar no centro */
 }
 .secao h1,
-h2 {
+.secao h2 {
   margin-bottom: 20px;
   font-size: 2.5rem;
 }
 
-/* Cores diferentes para diferenciar as seções */
+/* Configurações exclusivas das seções*/
 #home {
   background: url(img/image1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 80px; /* Exatamente a mesma altura da sua navbar */
+  align-items: flex-start;
+  padding-left:0 2rem;
 }
+#home h2 {
+  font-size: 4.1rem; /* Deixa o seu "pipipo popopo" bem grande! */
+  color: #351D14;     /* Cor branca para destacar no fundo */
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+.btn-home{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #351D14;
+    background-color: #C46338;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-home:hover{
+    background-color: #d67145;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-home:active{
+    transform: translateY(-1px);
+}
+
+/* NOVO: Altera APENAS o parágrafo p que está dentro da Home */
+#home p {
+  font-size: 1.5rem; /* Deixa o seu "biscoitinho com mel" maior */
+  color: #ff0000;
+}
+
+
 
 #sobre {
   background-color: #e2e2e2;
