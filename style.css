@@ -1,144 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: "Nunito", "serif";
-    min-height: 100vh;
-    background: url(img/normalBG.png)no-repeat center center/cover;
+/*efeito de rolagem suave ao clicar no menu*/
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background: transparent;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    z-index: 999;
+body {
+  font-family: "Nunito", "serif";
+  min-height: 100vh;
+  background-color: #FCF3E5;
+}
+
+/*Navbar!=============*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  z-index: 999;
 }
 
 .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 2rem;
-    max-width: 1600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1600px;
 }
 
-.navbar-logo{
-    font-size: 2rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #351D14;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.navbar-container .navbar-menu{
-    display: flex;
-    text-align: center;
-    gap: 1.5rem;
-    list-style: none;
+.navbar-container .navbar-menu {
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
 }
 
-.navbar-container .navbar-menu li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding: 3px 20px;
-    border-radius: 20px;
-    border:  2px solid transparent;
-    transition: all 0.7s ease;
-    white-space: nowrap;
+.navbar-container .navbar-menu li a {
+  text-decoration: none;
+  color: #351D14;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 3px 20px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
 }
 
 .navbar-container .navbar-menu li a:hover {
-    color: rgb(24, 23, 23);
-    background: rgba(188, 212, 229, 0.8);
-    border: 2px solid #fff;
+  color: rgb(24, 23, 23);
+  background: rgba(188, 212, 229, 0.8);
+  border: 2px solid #fff;
 }
-.navbar-container .navbar-menu.active{
-    display: flex;
+.navbar-container .navbar-menu.active {
+  display: flex;
 }
 
-.navbar-toggle{
-   display: none;
-   background: transparent; 
-   padding: 10px;
-   border: none;
-   cursor: pointer;
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
 
 .navbar-toggle.active .bar:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
-.navbar-toggle.active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
 
-.navbar-toggle.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
-.bar{
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background: #fff;
-    transition: all 0.3s ease-in-out;
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
-
-/*estilo responsivo*/
+/*estilo responsivo da navbar*/
 @media (max-width: 880px) {
-    .navbar{
-        backdrop-filter: none;
-    }
+  .navbar {
+    backdrop-filter: none;
+  }
 
-    .navbar-container .navbar-menu{
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.7rem !important;
-        position: absolute;
-        height: 100vh;
-        width: 250px;
-        top: 0;
-        right: 0;
-        padding:  5rem 1.5rem;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-    }
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
 
-    .navbar-toggle{
-        display: block;
-        z-index: 999;
-    }
+  .navbar-toggle {
+    display: block;
+    z-index: 999;
+  }
 }
 
-@media (max-width: 480px){
-    .navbar-container{
-        padding: 0 1rem;
-    }
-    
-    .navbar-logo{
-        font-size: 1,7rem;
-    }
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
 
-    .navbar-container .navbar-menu li a{
-        font-size: 1.2rem;
-        padding: 3px 15px;
-    }
+  .navbar-logo {
+    font-size: 1, 7rem;
+  }
+
+  .navbar-container .navbar-menu li a {
+    font-size: 1.2rem;
+    padding: 3px 15px;
+  }
+}
+
+/*estilo padrão para as seções!=======*/
+.secao {
+  min-height: 100vh; /*isso faz a seção fica do tamanho da tela*/
+  padding: 100px 20px 20px 20px; /* Espaço para o menu não cobrir o texto eu acho*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /*isso faz o texto ficar no centro */
+}
+.secao h1,
+h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+/* Cores diferentes para diferenciar as seções */
+#home {
+  background: url(img/image1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 80px; /* Exatamente a mesma altura da sua navbar */
+}
+
+#sobre {
+  background-color: #e2e2e2;
+}
+#servicos {
+  background-color: #d0d0d0;
+}
+#blog {
+  background-color: #bebebe;
+}
+#contato {
+  background-color: #acacac;
 }
