@@ -228,11 +228,100 @@ body {
   color: #ff0000;
 }
 
-
-
 #sobre {
-  background-color: #e2e2e2;
+  background-color: #FDF3E6;
+  padding-top: 40px !important; 
 }
+/*---------ESTILOS DOS CARDS------*/
+/*-superiores-*/
+.sobre-cards-container{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.card-info{
+  flex: 1; /* Faz todas as 3 caixinhas terem exatamente o mesmo tamanho LEMBRE-SE DISSO*/
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #F3E3CD;
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden; 
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho final */
+}
+
+.card-image {
+  /* CORREÇÃO: Define o tamanho máximo fixo para caber no quadradinho */
+  width: 90px;       
+  height: 90px;
+  
+  /* Força a imagem a se adaptar à área estipulada acima */
+  object-fit: contain; 
+  flex-shrink: 0; 
+}
+
+.card-info p{
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #351D14;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/*-inferiores-*/
+.sobre-conteudo{
+  display: flex;
+  width: 100%;
+  gap: 40px; /* Espaço entre o texto e a imagem */
+  align-items: stretch;
+}
+
+.sobre-texto{
+  flex: 1;
+  background-color: #F3E3CD;
+  padding: 40px;
+  border-radius: 16px;/*DE UMA OLHADA NISSO acho que não comnbian essa borda diferenten*/
+  text-align: left;
+}
+
+.sobre-texto h2{
+  font-size: 2.5rem;
+  color: #351D14;
+  margin-bottom: 5px;
+}
+
+.sobre-texto h3{
+  font-size: 1.1rem;
+  color: #7d5a3e;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.sobre-texto p{
+  font-size: 1.05rem;
+  color: #351D14;
+  line-height: 1.6;
+}
+
+/*-estilo da imagem-*/
+.sobre-imagem{
+  flex: 1;
+}
+
+.sobre-imagem img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher o espaço perfeitamente(eu sou bocó eu tenho q anortar mesmo*/
+  border-radius: 16px;
+}
+
+
+
+
+
+
 #servicos {
   background-color: #d0d0d0;
 }
