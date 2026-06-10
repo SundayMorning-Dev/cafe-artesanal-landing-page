@@ -164,7 +164,6 @@ body {
     width: 100%; 
     max-width: 1600px;/* Alinhado perfeitamente com sua navbar */
     padding: 0 2rem;/* Espaçamento de segurança nas bordas esquerda/direita */
-
 }
 
 .secao {
@@ -228,6 +227,8 @@ body {
   color: #ff0000;
 }
 
+
+/*========SOBRE=============*/
 #sobre {
   background-color: #FDF3E6;
   padding-top: 40px !important; 
@@ -318,8 +319,113 @@ body {
 }
 
 
+/*========CARDAPIO=============*/
+#cardapio {
+  background-color: #FCF3E5;
+  padding-top: 40px !important;
+}
 
+.cardapio-titulo{
+  width: 100%;
+  margin-bottom: 170px;
+  text-align: left;
+}
 
+.cardapio-titulo h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.8rem;
+  color:#351D14;
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+
+.cardapio-titulo p{
+  font-size: 1.1rem;
+  color: #7d5a3e;
+
+}
+
+/*alinhamento dos tres cards*/
+
+.cardapio-grid{
+ display: flex;
+  flex-direction: row;      /* Força a organização em linha (horizontal) */
+  justify-content: space-between; /* Distribui os cards igualmente ponta a ponta(esse tava dando muito erro) */
+  align-items: stretch;     /* Faz todos os cards terem a mesma altura */
+  width: 100%;
+  gap: 30px;                /* Define o espaço exato de 30px entre cada caixinha */
+  box-sizing: border-box;
+  padding: 0 90px;
+}
+
+/*estilo dos cards dos cafés*/
+.card-produto{
+  flex: 1;                  /* Divide o espaço da tela igualmente (33% para cada card) */
+  min-width: 0;             /* Impede que o conteúdo interno estoure a largura do card */
+  height: 400px;            /* Altura fixa para manter o visual vertical da imagem */
+  position: relative;        
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* IMAGENS DE FUNDO DOS CARDS (talvez eu ponha textura) */
+.card-fase-1{
+   background: linear-gradient(to top, rgba(74,44,17,0.95), rgba(74,44,17,0.4)), url('img/normalBG.png');
+  background-size: cover;
+  background-position: center;
+}
+.card-fase-2{
+   background: linear-gradient(to top, rgba(74,44,17,0.95), rgba(74,44,17,0.4)), url('img/normalBG.png');
+  background-size: cover;
+  background-position: center;
+}
+.card-fase-3{
+   background: linear-gradient(to top, rgba(74,44,17,0.95), rgba(74,44,17,0.4)), url('img/normalBG.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.produto-foto-wrapper{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%); /* Joga a imagem para fora da borda superior do card */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #FCF3E5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background-color: #d0d0d0;
+}
+
+.foto-produto{
+  width: 100%;
+  height: 100%;
+  margin-left: 5px;
+  object-fit: contain;  /* Garante que a foto da xícara apareça inteira */
+  filter: drop-shadow(0 15px 20px rgba(0,0,0,0,3));/* Cria sombra realista embaixo da xícara veyh*/ 
+}
+
+/* Altera o tamanho do círculo da foto APENAS no card 2 */
+.card-fase-2 .foto-produto {
+  width: 100%; 
+  height: 100%; /* Manter igual a largura para continuar um círculo perfeito */
+  margin-left: 10px;
+}
+
+/*texto dentro do card marrom*/
+.foto-produto h3{
+  color: #FCF3E5;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 15px;
+}
 
 
 #servicos {
