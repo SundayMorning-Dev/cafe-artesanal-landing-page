@@ -24,12 +24,13 @@ body {
   --titulo1: #351d14;
   --titulo2: #7d5a3e;
   --texto: #351d14;
-  --button1:#c46338;
-  --button2:#ff843d;
-
+  --button1: #c46338;
+  --button2: #ff843d;
 }
 
-/*Navbar!=============*/
+/* ===================================================
+                    NAVBAR
+   =================================================== */
 .navbar {
   display: flex;
   align-items: center;
@@ -169,7 +170,9 @@ body {
   }
 }
 
-/*estilo padrão para as seções!=======*/
+/* ===================================================
+                    CONTAINER GERAL
+   =================================================== */
 
 /* CONTAINER GERAL DO SITE, Coloque esta classe em todas as seções para alinhar o conteúdo */
 .container-secao {
@@ -192,7 +195,9 @@ body {
   font-size: 2.5rem;
 }
 
-/* Configurações exclusivas das seções*/
+/* ===================================================
+                    HOME
+   =================================================== */
 #home {
   background: url(img/image1.png);
   background-size: cover;
@@ -239,7 +244,9 @@ body {
   color: #ff0000;
 }
 
-/*========SOBRE=============*/
+/* ===================================================
+                    SOBRE
+   =================================================== */
 #sobre {
   background-color: #fdf3e6;
   padding-top: 40px !important;
@@ -329,7 +336,9 @@ body {
   border-radius: 16px;
 }
 
-/*========CARDAPIO=============*/
+/* ===================================================
+                    CARDAPIO
+   =================================================== */
 #cardapio {
   background-color: #fcf3e5;
   padding-top: 40px !important;
@@ -454,9 +463,9 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-bottom: 15px;
 }
-/*========FIM - CARDAPIO=============*/
-
-/*========PRODUTOS=============*/
+/* ===================================================
+                    PRODUTOS
+   =================================================== */
 
 #produtos {
   background-color: var(--fundo1);
@@ -602,8 +611,6 @@ body {
   flex-shrink: 0;
 }
 
-/*========FIM - PRODUTOS=============*/
-
 /* ===================================================
                       SERVIÇOS
    =================================================== */
@@ -613,9 +620,16 @@ body {
   padding-bottom: 80px;
 }
 
-.newsletter-container{
+.newsletter-container {
   width: 100%;
-  background: linear-gradient(90deg, #603813 0%, #b8733359 45%, rgba(96, 56, 19, 0.13) 100%), url('img/image8.png');
+  background:
+    linear-gradient(
+      90deg,
+      #603813 0%,
+      #b8733359 45%,
+      rgba(96, 56, 19, 0.13) 100%
+    ),
+    url("img/image8.png");
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
@@ -625,12 +639,12 @@ body {
   margin-bottom: 60px; /* Afasta o banner da seção de testemunhos abaixo */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
-.newsletter-conteudo{
-  max-width: 600px;/* Mantém o texto focado no lado esquerdo do banner */
+.newsletter-conteudo {
+  max-width: 600px; /* Mantém o texto focado no lado esquerdo do banner */
   text-align: left;
 }
 
-.newsletter-conteudo h2{
+.newsletter-conteudo h2 {
   color: #fff;
   font-size: 2.3rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -639,7 +653,7 @@ body {
   margin-bottom: 25px;
 }
 
-.newsletter-form{
+.newsletter-form {
   display: flex;
   gap: 15px;
   width: 100%;
@@ -647,7 +661,7 @@ body {
   margin-bottom: 15px;
 }
 
-.input-email{
+.input-email {
   flex: 1;
   padding: 25px 35px;
   border-radius: 30px;
@@ -657,7 +671,7 @@ body {
   background-color: #ffffff;
 }
 
-.btn-assinar{
+.btn-assinar {
   padding: 10px 40px;
   border-radius: 30px;
   border: none;
@@ -669,12 +683,12 @@ body {
   transition: background 0.3s ease;
 }
 
-.btn-assinar:hover{
+.btn-assinar:hover {
   background-color: #ff843d;
 }
 
-.newsletter-subtexto{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.newsletter-subtexto {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   color: #f5e6d3;
   font-size: 1.2rem;
@@ -688,46 +702,47 @@ body {
 }
 /*bloco inferiores testemunhos*/
 
-.testemunhos-container{
+.testemunhos-container {
   width: 100%;
-  background-color: var(--fundo2) ;
+  background-color: var(--fundo2);
   border-radius: 25px;
   padding: 40px;
   box-sizing: border-box;
 }
 
-.testemunhos-titulo{
+.testemunhos-titulo {
   width: 100%;
   text-align: left;
   margin-bottom: 60px;
 }
 
-.testemunhos-titulo h2{
-  font-size: 2.5rem; ;
+.testemunhos-titulo h2 {
+  font-size: 2.5rem;
   color: var(--texto);
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.testemunhos-titulo p{
+.testemunhos-titulo p {
   font-size: 1rem;
   color: var(--titulo2);
 }
 
-.testemunhos-grid{/*grid  horizontal*/
+.testemunhos-grid {
+  /*grid  horizontal*/
   display: flex;
   width: 100%;
   gap: 25px;
 }
 
-.testemunhos-item{
+.testemunhos-item {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card-testemunhos{
+.card-testemunhos {
   width: 100%;
   background-color: #fff;
   border-radius: 16px;
@@ -741,7 +756,7 @@ body {
   margin-bottom: 20px;
 }
 
-.avatar-wrapper{
+.avatar-wrapper {
   width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -751,13 +766,13 @@ body {
   flex-shrink: 0;
 }
 
-.foto-avatar{
+.foto-avatar {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.texto-depoimento{
+.texto-depoimento {
   font-size: 1.1rem;
   font-weight: 600;
   color: #111111;
@@ -766,12 +781,12 @@ body {
   text-align: center;
 }
 
-.carrossel-dots{
+.carrossel-dots {
   display: flex;
   gap: 8px;
 }
 
-.dot{
+.dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -782,7 +797,7 @@ body {
   background-color: #603813; /* Pontinho escuro ativado */
 }
 
-.nome-cliente{
+.nome-cliente {
   font-size: 1.3rem;
   font-weight: bold;
   color: #000000;
@@ -799,7 +814,7 @@ body {
   padding-bottom: 60px;
 }
 
-.kit-layout-duas-colunas{
+.kit-layout-duas-colunas {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   width: 100%;
@@ -807,59 +822,59 @@ body {
   align-items: stretch;
 }
 
-.kit-coluna-1{
- display: flex;
+.kit-coluna-1 {
+  display: flex;
   flex-direction: column;
   text-align: left;
   height: 100%;
 }
 
-.kit-coluna-1 h2{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.kit-coluna-1 h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2.8rem;
   color: var(--titulo1);
   margin-bottom: 5px;
   line-height: 1.2;
 }
 
-.kit-subtitulo{
+.kit-subtitulo {
   font-size: 0.9rem;
   color: var(--titulo2);
   display: block;
   margin-bottom: 20px;
 }
 
-.kit-descrição{
+.kit-descrição {
   font-size: 1.05rem;
   color: var(--texto);
   line-height: 1.5;
   margin-bottom: 30px;
 }
 
-.kit-image-wrapper{
+.kit-image-wrapper {
   width: 100%;
-  flex: 1;            /* Faz a div preencher todo o espaço restante inferior */
+  flex: 1; /* Faz a div preencher todo o espaço restante inferior */
   position: relative; /* Serve como ponto de ancoragem para a imagem absoluta */
   border-radius: 20px;
   overflow: hidden;
 }
 
-.kit-imagem{
- position: absolute;
+.kit-imagem {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;       /*  Mudado de auto para 100% para esticar até a base - importante lembrar disso*/
-  object-fit: cover;  /* Corta as bordas sem amassar o desenho */
+  height: 100%; /*  Mudado de auto para 100% para esticar até a base - importante lembrar disso*/
+  object-fit: cover; /* Corta as bordas sem amassar o desenho */
   border-radius: 20px;
 }
 
-.kit-coluna2{
-height: 100%;
+.kit-coluna2 {
+  height: 100%;
   box-sizing: border-box;
 }
 
-.kit-card-formulario{
+.kit-card-formulario {
   width: 100%;
   background-color: transparent;
   border: 1px solid var(--texto);
@@ -868,8 +883,8 @@ height: 100%;
   box-sizing: border-box;
 }
 
-.kit-card-formulario h3{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.kit-card-formulario h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
   color: var(--texto);
   margin-top: 0;
@@ -879,20 +894,20 @@ height: 100%;
 }
 
 /* ORGANIZAÇÃO DOS CAMPOS DO FORMULÁRIO */
-.kit-form{
+.kit-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.form-grupo{
+.form-grupo {
   display: flex;
   flex-direction: column;
   gap: 8px;
   text-align: left;
 }
 
-.form-grupo label{
+.form-grupo label {
   font-size: 1rem;
   font-weight: bold;
   color: var(--titulo1);
@@ -900,7 +915,7 @@ height: 100%;
 
 /* CUSTOMIZAÇÃO DOS DROPDOWNS (SELECTS) */
 
-.select-wrapper select{
+.select-wrapper select {
   width: 100%;
   padding: 12px 20px;
   font-size: 1rem;
@@ -910,7 +925,7 @@ height: 100%;
   outline: none;
   cursor: pointer;
   appearance: none;
-  background-image: url(img/normalBG.png);/*COLOCA O VEZINHO AQUIIIII*/
+  background-image: url(img/normalBG.png); /*COLOCA O VEZINHO AQUIIIII*/
   background-repeat: no-repeat;
   background-position: right 15px center;
   background-size: 15px;
@@ -918,7 +933,7 @@ height: 100%;
 }
 
 /* MOLDURA RETANGULAR PARA AS OPÇÕES DE RADIO BUTTON */
-.radio-container-moldura{
+.radio-container-moldura {
   width: 100%;
   border: 1px solid var(--texto);
   border-radius: 12px;
@@ -929,7 +944,7 @@ height: 100%;
   gap: 12px;
 }
 
-.radio-opcao{
+.radio-opcao {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -939,7 +954,7 @@ height: 100%;
 }
 
 /* BOTÃO LARANJA DE ADICIONAR AO CARRINHO */
-.btn-adicionar-kit{
+.btn-adicionar-kit {
   width: 100%;
   padding: 15px;
   margin-top: 10px;
@@ -957,12 +972,127 @@ height: 100%;
   background-color: var(--button2);
 }
 
-
-
-
 /* ===================================================
-                    Contato
+                    CONTATO/FOOTER
    =================================================== */
+
+   .secao-footer{
+    width: 100%;
+    background-color: #3d2211;
+    min-height: auto !important;  /* Anula o 100vh da tela inteira e deixa ele baixinho */
+    padding: 40px 0;
+   }
+
+
 #contato {
-  background-color: #acacac;
+  background-color: #3d2211;
+  color: var(--fundo1);
+  padding: 60px 0 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ALINHAMENTO DAS 4 COLUNAS DE CIMA */
+.footer-principal{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  text-align: left;
+}
+
+/* Estilo da Coluna da Logo (Esquerda) */
+.footer-coluna-marca {
+  flex: 1.5; /* Dá um pouco mais de largura para a logo respirar */
+}
+
+.footer-logo{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  color:#fdf5eb;
+  line-height: 1.1;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.footer-sublogo{
+  font-size: 1.2rem;
+  color: #c9b195;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.footer-coluna-links{
+  flex: 1;
+}
+
+.footer-coluna-links h3{
+   font-size: 1.1rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-coluna-links ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-coluna-links li{
+  margin-bottom: 12px;
+}
+
+.footer-coluna-links a{
+  color:#c9b195 ;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-coluna-links a:hover {
+  color: #ffffff; /* Brilha ao passar o mouse */
+}
+
+.footer-telefone-container{
+  width: 100%;
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-telefone{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.footer-linha {
+  border: 0;
+  border-top: 3px solid rgba(255, 255, 255, 0.1); /* Linha branca bem suave */
+  margin: 10px 0 20px 0;
+}
+
+.footer-base{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #a38c76;
+}
+
+.footer-copyright{
+  margin: 0;
+}
+
+.footer-redes a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-redes a:hover{
+    text-decoration: underline;
+
 }
