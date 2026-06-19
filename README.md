@@ -1,5 +1,7 @@
 <img width="1366" height="768" alt="Captura de Tela (1)" src="https://github.com/user-attachments/assets/22d980a9-512a-4ced-b84a-82349647580d" /># ☕ Landing Page - Café Artesanal
 
+Acesse meu site! :https://sundaymorning-dev.github.io/cafe-artesanal-landing-page/
+
 Uma landing page desenvolvida para uma marca fictícia de café artesanal, criada com o objetivo de praticar desenvolvimento Front-End, design responsivo e construção de interfaces modernas.
 
 ## 📖 Sobre o Projeto
