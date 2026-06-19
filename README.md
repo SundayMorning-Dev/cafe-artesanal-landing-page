@@ -4,6 +4,8 @@ Uma landing page desenvolvida para uma marca fictícia de café artesanal, criad
 
 ## 📖 Sobre o Projeto
 
+versão 1.01~
+
 Este projeto simula o site de uma empresa especializada na venda de cafés artesanais e grãos selecionados. A proposta foi criar uma experiência visual acolhedora e elegante, transmitindo a qualidade dos produtos e a identidade da marca.
 
 Durante o desenvolvimento, foquei em boas práticas de HTML e CSS, organização do código e criação de um layout agradável para diferentes tamanhos de tela.
