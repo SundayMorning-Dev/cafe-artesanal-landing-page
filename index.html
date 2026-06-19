@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raposa&Grão</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -222,34 +226,42 @@
         <!--1-bloco inferiores de cards-->
         <div class="produto-cards-container">
           <div class="mini-titulo-produto">
-            <h2>pipi popo</h2>
-            <p>FIU FIU olha amensagein</p>
+            <h2>Conheça nossa comunidade</h2>
+            <p>Eventos e posts</p>
+          </div>
+
+          <!-- Seção Comunidade / Cards de Informação -->
+          <div class="card-info2">
+            <img src="img/fdcafe1.png" alt="raposinha2" class="card-image2" />
+            <div class="card-texto-bloco">
+              <p>
+                <strong>Novo café especial!</strong><br />
+                <span class="texto-normal">prove o novo café especial</span>
+              </p>
+            </div>
           </div>
 
           <div class="card-info2">
-            <img
-              src="img/raposinha2.png"
-              alt="raposinha2"
-              class="card-image2"
-            />
-            <p><strong>pipi</strong><br />popo</p>
+            <img src="img/pepo1.jpg" alt="raposinha2" class="card-image2" />
+            <div class="card-texto-bloco">
+              <p>
+                <strong>Novo café especial!</strong><br />
+                <span class="texto-normal">prove o novo café especial</span>
+              </p>
+            </div>
           </div>
+
           <div class="card-info2">
-            <img
-              src="img/raposinha2.png"
-              alt="raposinha2"
-              class="card-image2"
-            />
-            <p><strong>pipi</strong><br />popo</p>
+            <img src="img/pepo2.png" alt="raposinha2" class="card-image2" />
+            <div class="card-texto-bloco">
+              <p>
+                <strong>Novo café especial!</strong><br />
+                <span class="texto-normal">prove o novo café especial</span>
+              </p>
+            </div>
           </div>
-          <div class="card-info2">
-            <img
-              src="img/raposinha2.png"
-              alt="raposinha2"
-              class="card-image2"
-            />
-            <p><strong>pipi</strong><br />popo</p>
-          </div>
+
+          <!-- Fechamentos das divs externas da seção -->
         </div>
       </div>
     </section>
@@ -362,7 +374,7 @@
           <!--coluna da esquerda- imagem-->
           <div class="kit-coluna-1">
             <h2>Leve o aconchego para casa</h2>
-            <span class="kit-subtitulo">Bollk Acess & Booking</span>
+            <span class="kit-subtitulo">Faça seu pedido & acesse</span>
             <p class="kit-descrição">
               Escolha seus itens favoritos para criar um presente único, que
               conta histórias, une pessoas e traz mais aconchego para a rotina.
@@ -377,65 +389,78 @@
             </div>
           </div>
 
+          <!--coluna da direita - formulario-->
           <div class="kit-coluna2">
             <div class="kit-card-formulario">
               <h3>Personalize seu kit de presentes perfeito</h3>
-              <form class="kit-form"></form>
 
-              <div class="form-grupo">
-                <label>Escolha grão</label>
-                <div class="select-wrapper">
-                  <select name="grao">
-                    <option value="">Selecione o grão</option>
-                    <option value="sombra-manha">Sombra da Manhã (250g)</option>
-                    <option value="abraco-noturno">
-                      Abraço Noturno (250g)
-                    </option>
-                    <option value="floresta-tropical">
-                      Floresta Tropical (250g)
-                    </option>
-                    <option value="brisa-tranquila">
-                      Brisa Tranquila (250g)
-                    </option>
-                  </select>
+              <!-- CORREÇÃO: O form agora abraça todo o conteúdo do cartão corretamente -->
+              <form class="kit-form">
+                <!-- Campo 1: Grão -->
+                <div class="form-grupo">
+                  <label>Escolha grão</label>
+                  <div class="select-wrapper">
+                    <select name="grao">
+                      <option value="">Selecione o grão</option>
+                      <option value="sombra-manha">
+                        Sombra da Manhã (250g)
+                      </option>
+                      <option value="abraco-noturno">
+                        Abraço Noturno (250g)
+                      </option>
+                      <option value="floresta-tropical">
+                        Floresta Tropical (250g)
+                      </option>
+                      <option value="brisa-tranquila">
+                        Brisa Tranquila (250g)
+                      </option>
+                    </select>
+                    <i class="bx bx-chevron-down bx-sm select-setinha"></i>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Campo 2: Escolha Mimo (Radio Buttons Emoldurados) -->
-              <div class="form-grupo">
-                <label>Escolha Mimo</label>
-                <div class="radio-container-moldura">
-                  <label class="radio-opcao">
-                    <input type="radio" name="mimo" value="caneca" checked />
-                    <span class="radio-customizado"></span> Caneca
-                  </label>
-                  <label class="radio-opcao">
-                    <input type="radio" name="mimo" value="ecobag" />
-                    <span class="radio-customizado"></span> Ecobag
-                  </label>
-                  <label class="radio-opcao">
-                    <input type="radio" name="mimo" value="adesivos" checked />
-                    <span class="radio-customizado"></span> Adesivos
-                  </label>
+                <!-- Campo 2: Escolha Mimo -->
+                <div class="form-grupo">
+                  <label>Escolha Mimo</label>
+                  <div class="radio-container-moldura">
+                    <label class="radio-opcao">
+                      <input type="radio" name="mimo" value="caneca" checked />
+                      <span class="radio-customizado"></span> Caneca
+                    </label>
+                    <label class="radio-opcao">
+                      <input type="radio" name="mimo" value="ecobag" />
+                      <span class="radio-customizado"></span> Ecobag
+                    </label>
+                    <label class="radio-opcao">
+                      <input type="radio" name="mimo" value="adesivos" />
+                      <span class="radio-customizado"></span> Adesivos
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <!-- Campo 3: Escolha Embalagem (Select Dropdown) -->
-              <div class="form-grupo">
-                <label>Escolha embalagem</label>
-                <div class="select-wrapper">
-                  <select name="emabalagem">
-                    <option value="">Escolha embalagem</option>
-                    <option value="caixa-madeira">
-                      Caixa de madeira artesanal
-                    </option>
-                    <option value="sacola-cozy">Sacola kraft cozy</option>
-                  </select>
+
+                <!-- Campo 3: Escolha Embalagem -->
+                <div class="form-grupo">
+                  <label>Escolha embalagem</label>
+                  <div class="select-wrapper">
+                    <select name="emabalagem">
+                      <option value="">Escolha embalagem</option>
+                      <option value="caixa-madeira">
+                        Caixa de madeira artesanal
+                      </option>
+                      <option value="sacola-cozy">Sacola kraft cozy</option>
+                    </select>
+                    <i class="bx bx-chevron-down bx-sm select-setinha"></i>
+                  </div>
+                  <!-- CORREÇÃO: Fechamento da div select-wrapper que faltava -->
                 </div>
-              </div>
-              <!-- Botão de Enviar (Adicionar ao Carrinho) -->
-              <button type="submit" class="btn-adicionar-kit">
-                Adicionar Kit ao Carrinho
-              </button>
+                <!-- CORREÇÃO: Fechamento da div form-grupo que faltava -->
+
+                <!-- Botão de Enviar -->
+                <button type="submit" class="btn-adicionar-kit">
+                  Adicionar Kit ao Carrinho
+                </button>
+              </form>
+              <!-- Fechamento correto do form -->
             </div>
           </div>
         </div>
@@ -444,7 +469,7 @@
 
     <!--seção contato-->
     <footer class="secao-footer">
-      <section id="contato" >
+      <section id="contato">
         <div class="container-secao">
           <!-- CONTEÚDO PRINCIPAL (4 COLUNAS) -->
           <div class="footer-principal">
