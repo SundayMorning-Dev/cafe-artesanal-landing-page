@@ -20,7 +20,7 @@ body {
 :root {
   --titulo1: #351d14;
   --titulo2: #7d5a3e;
-  --titulo3:#4A2C11;
+  --titulo3: #4a2c11;
   --button1: #c46338;
   --button2: #ff843d;
   --fundo1: #fcf3e5;
@@ -28,16 +28,32 @@ body {
   --fundo3: #e6ceb2;
 
   --espresso: #351d14;
-  --cafe-torrado: #4A2C11; 
+  --cafe-torrado: #4a2c11;
   --capuccino: #7d5a3e;
   --baunilha1: #fcf3e5;
   --baunilha2: #f3e3cd;
-  --baunilha3: #e6ceb2; 
-  --cafe-com-leite: #BC8A5F;   
-  --suspiro: #FCFBF9;         
-  --chantilly: #F9F5F0;       
-  --espuma-de-leite: #F3EAE1;     
+  --baunilha3: #e6ceb2;
+  --cafe-com-leite: #bc8a5f;
+  --suspiro: #fcfbf9;
+  --chantilly: #f9f5f0;
+  --espuma-de-leite: #f3eae1;
 }
+
+/* ===================================================
+                      ANIMAÇÃO
+   =================================================== */
+
+   /*Classe que vou usar pra animar subir fade in simples*/
+   .animar-subir{
+     opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+   }
+
+   .animar-subir.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  }
 
 /* ===================================================
                     NAVBAR
@@ -185,7 +201,6 @@ body {
                     CONTAINER GERAL
    =================================================== */
 
-/* CONTAINER GERAL DO SITE, Coloque esta classe em todas as seções para alinhar o conteúdo */
 .container-secao {
   width: 100%;
   max-width: 1600px; /* Alinhado perfeitamente com sua navbar */
@@ -223,6 +238,18 @@ body {
   color: #351d14; /* Cor branca para destacar no fundo */
   max-width: 600px;
   line-height: 1.2;
+  animation: subirSuave 0.8s ease-out forwards;
+}
+
+@keyframes subirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Começa 30px mais abaixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
 }
 
 .btn-home {
@@ -286,10 +313,15 @@ body {
   /* CORREÇÃO: Define o tamanho máximo fixo para caber no quadradinho */
   width: 90px;
   height: 90px;
-
   /* Força a imagem a se adaptar à área estipulada acima */
   object-fit: contain;
   flex-shrink: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(4px 4px 0px #351d14);
 }
 
 .card-info p {
@@ -320,6 +352,18 @@ body {
   font-size: 2.5rem;
   color: #351d14;
   margin-bottom: 5px;
+ 
+}
+
+@keyframes subirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Começa 30px mais abaixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
 }
 
 .sobre-texto h3 {
@@ -348,7 +392,7 @@ body {
 }
 
 /* ===================================================
-                    CARDAPIO
+                    CARDAPIO - sobre
    =================================================== */
 #cardapio {
   background-color: #fcf3e5;
@@ -446,13 +490,15 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%,-60%); /* Joga a imagem para fora da borda superior do card */
+  transform: translate(
+    -50%,
+    -60%
+  ); /* Joga a imagem para fora da borda superior do card */
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 4px solid var(--suspiro);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
- 
   background-color: var(--espuma-de-leite);
 }
 
@@ -461,7 +507,8 @@ body {
   height: 110%;
   margin-left: 5px;
   object-fit: contain; /* Garante que a foto da xícara apareça inteira */
-  filter: drop-shadow(    0 15px 20px rgba(0, 0, 0, 0, 3)
+  filter: drop-shadow(
+    0 15px 20px rgba(0, 0, 0, 0, 3)
   ); /* Cria sombra realista embaixo da xícara veyh*/
 }
 
@@ -481,7 +528,9 @@ body {
 .card-fase-2:hover .foto-produto,
 .card-fase-3:hover .foto-produto {
   transform: scale(1.25); /* Cresce 25% expandindo para fora das bordas */
-  filter: drop-shadow(0 10px 15px rgb(255, 255, 255)); /* Adiciona uma sombra realista exclusiva no formato do café */
+  filter: drop-shadow(
+    0 10px 15px rgb(255, 255, 255)
+  ); /* Adiciona uma sombra realista exclusiva no formato do café */
 }
 
 /* Altera o tamanho do círculo da foto APENAS no card 2 */
@@ -639,7 +688,7 @@ body {
   color: #351d14;
   margin: 0;
   line-height: 1.3;
-    word-wrap: break-word; 
+  word-wrap: break-word;
   word-break: break-word;
 }
 
@@ -655,9 +704,9 @@ body {
 }
 
 .texto-normal {
-  font-weight: 600;  /* 400 é o peso do texto normal/fino */
+  font-weight: 600; /* 400 é o peso do texto normal/fino */
   font-size: 1.1rem; /* Opcional: diminui um pouco a letra da descrição para destacar o título */
-  opacity: 0.8;      /* Opcional: deixa um marrom ligeiramente mais suave */
+  opacity: 0.8; /* Opcional: deixa um marrom ligeiramente mais suave */
 }
 
 .card-texto-bloco {
@@ -864,7 +913,6 @@ body {
                     BLOG
    =================================================== */
 
-
 #blog {
   background-color: var(--fundo1);
   padding-top: 60px;
@@ -943,7 +991,7 @@ body {
 }
 
 .kit-card-formulario h3 {
-  font-family:"Nunito", "serif";
+  font-family: "Nunito", "serif";
   font-size: 2rem;
   color: var(--titulo1);
   margin-top: 0;
@@ -964,7 +1012,6 @@ body {
   flex-direction: column;
   gap: 8px;
   text-align: left;
-  
 }
 
 .form-grupo label {
@@ -982,7 +1029,7 @@ body {
 
 .select-wrapper select {
   width: 100%;
- padding: 12px 40px 12px 20px;
+  padding: 12px 40px 12px 20px;
   font-size: 1rem;
   color: var(--titulo1);
   background-color: transparent;
@@ -1001,9 +1048,9 @@ body {
   top: 50%;
   right: 15px;
   transform: translateY(-50%); /* Centraliza verticalmente de forma perfeita */
-  font-size: 1.4rem;           /* Ajuste o tamanho da seta por aqui */
-  color: var(--titulo1);       /* A seta puxa automaticamente a cor do seu tema */
-  pointer-events: none;        /* 🌟 ESSENCIAL: Faz o clique passar direto pela seta e abrir o select */
+  font-size: 1.4rem; /* Ajuste o tamanho da seta por aqui */
+  color: var(--titulo1); /* A seta puxa automaticamente a cor do seu tema */
+  pointer-events: none; /* 🌟 ESSENCIAL: Faz o clique passar direto pela seta e abrir o select */
 }
 
 /* MOLDURA RETANGULAR PARA AS OPÇÕES DE RADIO BUTTON */
@@ -1045,7 +1092,6 @@ body {
 .btn-adicionar-kit:hover {
   background-color: var(--button2);
 }
-
 
 /* ===================================================
                     CONTATO/FOOTER
